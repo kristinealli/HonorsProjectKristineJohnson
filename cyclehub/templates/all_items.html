@@ -1,0 +1,16 @@
+{% extends "master.html" %} 
+{% block title %} Item Inventory - List of all items
+{% endblock title %} 
+
+{% block content %}
+<div class="mycard">
+	<h1>Items</h1>
+	<ul>
+		{% for x in myitems %}
+		<li onclick="window.location = 'details/{{ x.id }}'">
+			{{ x.name }} {{ x.description }}
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock content %}

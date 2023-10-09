@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+Details about {{ myitem.name }}
+{% endblock %}
+
+
+{% block content %}
+<div class="mycard">
+    <h1>{{ myitem.name }}</h1>
+    <p>Description: {{ myitem.description }}</p>
+    <p>Loan Terms: {{ myitem.loan_terms }}</p>
+    <p>Category: {{myitem.category}}</p>
+    <p>Item Owner: {{myitem.itemowner}}</p>
+    <p>Available:{{myitem.available}}</p>
+    <img src="{{ myitem.photo.url }}" alt="Photo">
+</div>
+{% endblock %}

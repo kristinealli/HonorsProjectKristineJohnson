@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'sc_global.css' %}" />
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		<div class="topnav">
+			<a href="/">HOME</a> |
+			<a href="/items">VIEW ITEMS TO SHARE</a> |
+			<a>SHARE YOUR STUFF</a> |
+			<a>ACCOUNT MANAGEMENT</a>|
+			<a>ABOUT SHARECYCLE</a>
+		</div>
+		{% block content %} {% endblock %}
+	</body>
+</html>
