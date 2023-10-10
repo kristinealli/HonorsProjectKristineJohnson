@@ -9,10 +9,15 @@
 		<div class="topnav">
 			<a href="/">HOME</a> |
 			<a href="/items">VIEW ITEMS TO SHARE</a> |
-			<a>SHARE YOUR STUFF</a> |
+			<a href="/add_item">SHARE YOUR STUFF</a> |
 			<a>ACCOUNT MANAGEMENT</a>|
 			<a>ABOUT SHARECYCLE</a>
 		</div>
-		{% block content %} {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+        {% block form_content %}
+        {% endblock form_content %}
+
 	</body>
 </html>

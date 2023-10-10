@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d3b85k4tadp8(e=_vz=s*23j7%(@ncx)5$jvms)h!k3inhv&ye'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -128,6 +128,14 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'sc_staticfiles'
 ]
+
+# Added settings for authentication and login.
+AUTH_USER_MODEL = 'cyclehub.scUser'   # Point to your custom user model.
+LOGIN_URL = 'login'                   # URL for the login view.
+LOGIN_REDIRECT_URL = 'main'           # Redirect after successful login.
+LOGOUT_REDIRECT_URL = 'main'          # Redirect after logout.
+# Store messages in cookies.
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
